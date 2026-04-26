@@ -1,0 +1,58 @@
+# Default: detect text and normalize line endings to LF on commit.
+# Working tree gets the platform's native EOL on checkout.
+* text=auto eol=lf
+
+# Binary types — never modify
+*.png         binary
+*.jpg         binary
+*.jpeg        binary
+*.gif         binary
+*.ico         binary
+*.webp        binary
+*.svg         text
+*.pdf         binary
+*.zip         binary
+*.tar.gz      binary
+*.7z          binary
+*.jar         binary
+*.apk         binary
+*.aab         binary
+*.ipa         binary
+*.keystore    binary
+*.jks         binary
+*.pfx         binary
+
+# Force LF for shell / config files (would break on CRLF)
+*.sh          text eol=lf
+*.bash        text eol=lf
+Dockerfile    text eol=lf
+*.dockerfile  text eol=lf
+docker-compose*.yml text eol=lf
+*.yaml        text eol=lf
+*.yml         text eol=lf
+
+# Force CRLF for Windows-only scripts
+*.bat         text eol=crlf
+*.cmd         text eol=crlf
+*.ps1         text eol=crlf
+
+# Source code — always LF (cross-platform)
+*.cs          text eol=lf
+*.csproj      text eol=lf
+*.sln         text eol=lf
+*.json        text eol=lf
+*.xml         text eol=lf
+*.dart        text eol=lf
+*.ts          text eol=lf
+*.tsx         text eol=lf
+*.js          text eol=lf
+*.jsx         text eol=lf
+*.css         text eol=lf
+*.scss        text eol=lf
+*.html        text eol=lf
+*.md          text eol=lf
+
+# Lockfiles — LF, but treat as binary diff (often huge)
+package-lock.json text eol=lf -diff
+pnpm-lock.yaml    text eol=lf -diff
+pubspec.lock      text eol=lf -diff
