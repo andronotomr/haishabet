@@ -4,19 +4,22 @@ Plano em fases. Cada fase tem critério de "pronto" verificável.
 
 ---
 
-## Fase 0 — Fundação (1–2 semanas)
+## Fase 0 — Fundação ✅ EM CURSO
 
 **Objetivo:** ambiente de dev funcionando, esqueleto dos 3 projetos rodando.
 
-- [ ] Repositório git inicializado, .gitignore, README raiz.
-- [ ] `backend/` — .NET 8 solution scaffold (Api/Application/Domain/Infrastructure/GameEngine) + EF Core + Postgres + Redis + Mongo via Docker Compose.
-- [ ] `mobile/` — Flutter scaffold + estrutura de pastas (features/, core/, shared/).
-- [ ] `web/` — Next.js scaffold com TypeScript + Tailwind + shadcn/ui.
-- [ ] Docker Compose local com Postgres 16 + Redis 7 + MongoDB 7.
-- [ ] `.env.example` em cada projeto.
-- [ ] Padrão de commit (Conventional Commits) e linter/formatter.
+- [x] Repositório git inicializado, `.gitignore`, `.gitattributes`, README raiz, `.editorconfig`.
+- [x] `backend/` — Solution `Haishabet` (.NET 8) com Api/Application/Domain/Infrastructure/GameEngine + UnitTests/IntegrationTests + EF Core + MongoDB.Driver + Redis + SignalR + Hangfire + MediatR + FluentValidation + Refit + Polly + Serilog + Testcontainers. `dotnet build`: 0 erro.
+- [x] `mobile/` — Flutter 3.41.7 scaffold (Android + iOS) + Riverpod + GoRouter + Dio + Freezed + json_serializable + secure_storage + local_auth + Firebase + signalr_netcore. `flutter analyze`: No issues.
+- [x] `web/` — Next.js 15 + TypeScript + Tailwind v4 + zustand + swr + TanStack Table + recharts + zod + react-hook-form + @microsoft/signalr. `pnpm build`: ok.
+- [x] `docker-compose.dev.yml` com Postgres 16 + Redis 7 + MongoDB 7 + healthchecks.
+- [x] `appsettings.Example.json` (backend) + `web/.env.example`.
+- [x] Conventional Commits + git-workflow doc (main/dev/fase-N).
+- [x] Helpers `scripts/dev-{up,down,logs,reset}.ps1`.
+- [ ] Validação final: `docker compose up` (aguardando Docker Desktop install)
+- [ ] PR `fase-0-fundacao` → `dev` no GitHub
 
-**Pronto quando:** `docker compose up` + `npm run dev` (backend) + `flutter run` + `npm run dev` (web) funcionam sem erro.
+**Pronto quando:** todas as branches mergeadas em `dev`, com `docker compose up` + `dotnet run` + `pnpm dev` + `flutter analyze` rodando sem erro.
 
 ---
 
