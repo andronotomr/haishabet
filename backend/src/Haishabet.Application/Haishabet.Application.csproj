@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Haishabet.Domain\Haishabet.Domain.csproj" />
+    <ProjectReference Include="..\Haishabet.GameEngine\Haishabet.GameEngine.csproj" />
   </ItemGroup>
 
   <ItemGroup>
