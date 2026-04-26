@@ -26,6 +26,7 @@ haishabet/
 8. [regulamentacao.md](regulamentacao.md) — exigências legais BR
 9. [roadmap.md](roadmap.md) — fases MVP → produção
 10. [setup-dev.md](setup-dev.md) — ambiente local
+11. [git-workflow.md](git-workflow.md) — estratégia de branches (main / dev / fase-N)
 
 ## Resumo executivo
 
