@@ -58,14 +58,18 @@ Thumbs.db
 .env
 .env.*
 !.env.example
-appsettings.Development.json
+# appsettings.Development.json É comitado (só placeholders dev_change_me).
+# Produção usa user-secrets / variáveis de ambiente / cofre — nunca arquivo no repo.
 appsettings.Production.json
-!appsettings.json
-!appsettings.Example.json
+appsettings.Local.json
 secrets.json
 *.pfx
 *.pem
 *.key
+
+# Arquivos temporários do instalador Docker Desktop / outros installers
+inst_user_settings.tmp
+*.installer.log
 
 # ---- Logs / DBs locais ----
 *.log
